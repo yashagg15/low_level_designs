@@ -1,0 +1,43 @@
+---- Library Management System ---
+
+
+# Use Cases:
+
+Add/Remove/Edit Books by Librarian Only
+Issue book
+Renew a book
+Return a book
+check fines while returning or renewing a book.
+
+These Requirements are covered:
+
+1. Member can search for books by their author, barCodeId, title or publication date etc.
+2. Each Book will have a unique id and rack number where a book is physically placed.
+3. A book can have multiple copies, and member can checkout any copy.
+4. The system can retrieve information about a particular book using barcodeId (a unique key for each bookItem)
+5. There should be a maximum limit (5) on how many books a member can check-out.
+6. There should be a maximum limit (10) on how many days a member can keep a book.
+7. The system should be able to collect fines for books returned after the due date.
+8. Each member will have a library card with a unique barcode
+
+
+Run the application main class LibraryApplication.java
+
+# A little demonstration after running the main class.
+# Feel free to add more functionality and bug fixes. Suggestions are welcomed to make the design more scalable with good design patterns.
+
+
+Only admin can add the books in the library
+Book was added by Akash
+Adding book item
+Book was added by Akash
+Adding book item
+Book{bookId='book2', bookTitle='Wild_Animals', bookType=SCARY, authorsList=[LibraryManagementSystem.AccountModel.Author@3532ec19, LibraryManagementSystem.AccountModel.Author@68c4039c]}uniqueBarCode='BC3', publicationDate=Mon Sep 09 00:00:00 IST 3918, issueDate=null, dueDate=null, rack=LibraryManagementSystem.Rack@59494225, bookStatus=AVAILABLE, personAccount=null}
+Book{bookId='book2', bookTitle='Wild_Animals', bookType=SCARY, authorsList=[LibraryManagementSystem.AccountModel.Author@3532ec19, LibraryManagementSystem.AccountModel.Author@68c4039c]}uniqueBarCode='BC3', publicationDate=Mon Sep 09 00:00:00 IST 3918, issueDate=null, dueDate=null, rack=LibraryManagementSystem.Rack@59494225, bookStatus=AVAILABLE, personAccount=null}
+Book has been issued to Yash
+Book{bookId='book2', bookTitle='Wild_Animals', bookType=SCARY, authorsList=[LibraryManagementSystem.AccountModel.Author@3532ec19, LibraryManagementSystem.AccountModel.Author@68c4039c]}uniqueBarCode='BC3', publicationDate=Mon Sep 09 00:00:00 IST 3918, issueDate=Sat Jun 01 11:50:29 IST 2024, dueDate=Tue Jun 11 11:50:29 IST 2024, rack=LibraryManagementSystem.Rack@59494225, bookStatus=ISSUED, personAccount=LibraryManagementSystem.AccountModel.MemberAccount@cb644e}
+Book can't be issued either it is issued multiple times or user has already reached its max limit to issue a book
+Fine details Fine{bookItem=Book{bookId='book2', bookTitle='Wild_Animals', bookType=SCARY, authorsList=[LibraryManagementSystem.AccountModel.Author@3532ec19, LibraryManagementSystem.AccountModel.Author@68c4039c]}uniqueBarCode='BC3', publicationDate=Mon Sep 09 00:00:00 IST 3918, issueDate=Sat Jun 01 11:50:29 IST 2024, dueDate=Thu Apr 11 11:50:29 IST 2024, rack=LibraryManagementSystem.Rack@59494225, bookStatus=ISSUED, personAccount=LibraryManagementSystem.AccountModel.MemberAccount@cb644e}, fineDate=Sat Jun 01 11:50:29 IST 2024, exceededDays=51, finePrice=5100.0}
+Book has been issued to Yash
+
+
